@@ -59,3 +59,35 @@ button#greetButton {
 button#greetButton:hover { 
     background-color: #ffdd44; /* Змінює фон кнопки на світліший жовтий при наведенні курсора */
 }
+
+/* Стилізація кнопки з id "moreInfoButton" */
+button#moreInfoButton {
+    background-color: #28a745; /* Зелений фон кнопки */
+    color: #fff; /* Білий текст кнопки */
+    padding: 10px 20px; /* Внутрішні відступи */
+    border: none; /* Видаляє рамку */
+    border-radius: 5px; /* Округляє кути */
+    cursor: pointer; /* Змінює курсор на "руку" при наведенні */
+    font-size: 16px; /* Розмір тексту */
+    margin-top: 20px; /* Відступ зверху */
+}
+
+/* Зміна стилю при наведенні */
+button#moreInfoButton:hover {
+    background-color: #218838; /* Темно-зелений фон при наведенні */
+}
+
+/* Стилізація елементів товарів */
+.box-item {
+    display: inline-block; /* Відображення товарів в рядок */
+    margin: 20px; /* Відступи між товарами */
+    text-align: center; /* Вирівнювання тексту по центру */
+    color: white; /* Колір тексту */
+}
+
+.box-image {
+    width: 150px; /* Ширина зображення товару */
+    height: 150px; /* Висота зображення товару */
+    object-fit: cover; /* Обрізка зображення, щоб воно заповнило контейнер */
+    border-radius: 10px; /* Округлення кутів зображення */
+}
