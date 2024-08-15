@@ -1,43 +1,44 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    font-family: Arial, sans-serif; /* Встановлює шрифт для всього тексту на сторінці */
+    margin: 0; /* Прибирає стандартні відступи браузера від країв сторінки */
+    padding: 0; /* Прибирає стандартні внутрішні відступи від країв сторінки */
+    background-color: #000; /* Встановлює чорний фон для всієї сторінки */
+    color: #fff; /* Встановлює білий колір тексту для всієї сторінки */
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
+header, footer {
+    background-color: #333; /* Встановлює темно-сірий фон для верхньої частини сторінки (header) і нижньої частини (footer) */
+    color: white; /* Встановлює білий колір тексту в header і footer */
+    padding: 10px; /* Додає внутрішні відступи (простір всередині елементів) по 10 пікселів з усіх сторін */
+    text-align: center; /* Вирівнює текст в header і footer по центру */
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
+    list-style: none; /* Видаляє стандартні маркери (кружки, квадрати) перед елементами списку */
+    padding: 0; /* Видаляє внутрішні відступи у списку */
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: inline; /* Відображає кожен елемент списку в одному рядку */
+    margin: 15px; /* Додає відстань в 15 пікселів між елементами списку */
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
+    color: white; /* Встановлює білий колір для тексту всередині посилань (лінків) */
+    text-decoration: none; /* Видаляє стандартне підкреслення з тексту посилань */
 }
 
 section {
-    padding: 20px;
-    text-align: center;
+    padding: 20px; /* Додає внутрішні відступи по 20 пікселів з усіх сторін для секцій */
+    text-align: center; /* Вирівнює текст всередині секцій по центру */
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    background-color: #333; /* Темно-сірий фон для footer */
+    color: white; /* Білий колір тексту в footer */
+    text-align: center; /* Вирівнює текст по центру в footer */
+    padding: 10px; /* Додає внутрішні відступи по 10 пікселів з усіх сторін */
+    position: fixed; /* Закріплює footer внизу екрану, щоб він залишався на місці під час прокручування сторінки */
+    width: 100%; /* Встановлює ширину footer на 100% від ширини екрану */
+    bottom: 0; /* Вирівнює footer до нижньої частини екрану */
 }
