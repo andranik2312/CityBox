@@ -1,77 +1,103 @@
-/* Стилізація основних елементів сторінки */
+/* Основні стилі для сторінки */
 body {
-    font-family: Arial, sans-serif; /* Встановлює шрифт для всього тексту на сторінці */
-    margin: 0; /* Прибирає стандартні відступи браузера від країв сторінки */
-    padding: 0; /* Прибирає стандартні внутрішні відступи від країв сторінки */
-    background-color: #000; /* Встановлює чорний фон для всієї сторінки */
-    color: #fff; /* Встановлює білий колір тексту для всієї сторінки */
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Чорний фон для всього тіла сторінки */
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Білий текст для кращого контрасту */
 }
 
-header, footer {
-    background-color: #333; /* Встановлює темно-сірий фон для header і footer */
-    color: white; /* Встановлює білий колір тексту в header і footer */
-    padding: 10px; /* Додає внутрішні відступи по 10 пікселів з усіх сторін */
-    text-align: center; /* Вирівнює текст в header і footer по центру */
+/* Стилі для заголовка */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
-nav ul {
-    list-style: none; /* Видаляє стандартні маркери (кружки, квадрати) перед елементами списку */
-    padding: 0; /* Видаляє внутрішні відступи у списку */
+header h1 {
+    margin: 0;
 }
 
-nav ul li {
-    display: inline; /* Відображає кожен елемент списку в одному рядку */
-    margin: 15px; /* Додає відстань в 15 пікселів між елементами списку */
+#greetButton {
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
-nav ul li a {
-    color: white; /* Встановлює білий колір для тексту всередині посилань (лінків) */
-    text-decoration: none; /* Видаляє стандартне підкреслення з тексту посилань */
+#greetButton:hover {
+    background-color: #e68900;
 }
 
-section {
-    padding: 20px; /* Додає внутрішні відступи по 20 пікселів з усіх сторін для секцій */
-    text-align: center; /* Вирівнює текст всередині секцій по центру */
+/* Секція товарів */
+#products {
+    background-color: #000; /* Чорний фон для секції товарів */
+    color: #fff; /* Білий текст для контрасту */
+    text-align: center;
+    padding: 20px 0;
 }
 
-footer {
-    background-color: #333; /* Темно-сірий фон для footer */
-    color: white; /* Білий колір тексту в footer */
-    text-align: center; /* Вирівнює текст по центру в footer */
-    padding: 10px; /* Додає внутрішні відступи по 10 пікселів з усіх сторін */
-    position: fixed; /* Закріплює footer внизу екрану, щоб він залишався на місці під час прокручування сторінки */
-    width: 100%; /* Встановлює ширину footer на 100% від ширини екрану */
-    bottom: 0; /* Вирівнює footer до нижньої частини екрану */
+#boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-/* Стилізація кнопки з id "greetButton" */
-button#greetButton { 
-    background-color: #ffcc00; /* Жовтий фон кнопки */
-    color: #333; /* Темний текст кнопки */
-    padding: 10px 20px; /* Внутрішні відступи (відстань від тексту до країв кнопки) */
-    border: none; /* Видаляє рамку кнопки */
-    border-radius: 5px; /* Округляє кути кнопки */
-    cursor: pointer; /* Змінює курсор на "руку" при наведенні на кнопку */
-    font-size: 16px; /* Розмір тексту на кнопці */
-    margin-top: 20px; /* Відступ зверху для кнопки */
-}
-
-/* Зміни стилю кнопки при наведенні */
-button#greetButton:hover { 
-    background-color: #ffdd44; /* Змінює фон кнопки на світліший жовтий при наведенні курсора */
-}
-
-/* Стилізація елементів товарів */
+/* Стилі для товарів */
 .box-item {
-    display: inline-block; /* Відображення товарів в рядок */
-    margin: 20px; /* Відступи між товарами */
-    text-align: center; /* Вирівнювання тексту по центру */
-    color: white; /* Колір тексту */
+    background-color: #1a1a1a; /* Темно-сірий фон для товарів */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.box-item:hover {
+    transform: scale(1.05);
 }
 
 .box-image {
-    width: 150px; /* Ширина зображення товару */
-    height: 150px; /* Висота зображення товару */
-    object-fit: cover; /* Обрізка зображення, щоб воно заповнило контейнер */
-    border-radius: 10px; /* Округлення кутів зображення */
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Секції "Про нас" та "Контакти" */
+section#about, section#contact {
+    background-color: #1a1a1a; /* Темно-сірий фон для цих секцій */
+    color: #fff; /* Білий текст для кращого контрасту */
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #fff; /* Білий колір для заголовків на темному фоні */
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Нижній колонтитул */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
 }
